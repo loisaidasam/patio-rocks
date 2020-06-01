@@ -1,5 +1,7 @@
 # Patio Rocks
 
+Because nerds can't just *do* yard work.
+
 ## Background
 
 We're making this patio thing in our backyard out of rocks from this stone yard around the corner.
