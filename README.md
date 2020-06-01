@@ -40,7 +40,7 @@ Note: I zipped up `assets/values.json` into `assets/values.json.tgz` for this re
 
 ### Histogram
 
-From here I used this histogram script to draw a histogram of the values so I could determine a "brightness" threshold, the idea being that everything below (darker than) this threshold would be considered dirt, and everything above (brighter than) this threshold would be considered stone.
+From here I used [this histogram script](histogram.py) to draw a histogram of the values so I could determine a "brightness" threshold, the idea being that everything below (darker than) this threshold would be considered dirt, and everything above (brighter than) this threshold would be considered stone.
 
 ```
 $ ./histogram.py assets/values.json --title "Patio Rocks/Dirt Pixel Lightness Histogram"
