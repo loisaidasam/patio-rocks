@@ -24,6 +24,10 @@ I manually cropped the image using the `Preview` app on OSX
 
 ![assets/cropped.png](assets/cropped.png)
 
+Note: Ignore our lemon tree potter. That thing was too heavy to lift very far so we just left it there while we did the work. Please excuse the crudity of this model...
+
+![assets/crudity.gif](assets/crudity.gif)
+
 ### Get "brightness" of image pixels
 
 ```
