@@ -20,7 +20,7 @@ Here's a picture I took of the patio rocks we've put down so far:
 
 ### Crop
 
-I manually cropped the image using the `Preview` app on OSX
+I manually cropped the image to be JUST the area I care about using the `Preview` app on OSX (I used the `Smart Lasso` tool, woof!)
 
 ![assets/cropped.png](assets/cropped.png)
 
@@ -30,15 +30,17 @@ Note: Ignore our lemon tree potter. That thing was too heavy to lift very far so
 
 ### Get "brightness" of image pixels
 
+I wrote [a script](image_color_values.py) to get the average "brightness" of each pixel using [the formula [(red + green + blue) / 3](https://stackoverflow.com/a/6449381) and outputted the results to a file in JSON format.
+
 ```
 $ ./image_color_values.py assets/cropped.png > assets/values.json
 ```
 
-Note: I zipped up `assets/values.json` into `assets/values.json.tgz` because it was WAY too big
+Note: I zipped up `assets/values.json` into `assets/values.json.tgz` for this repo because it was WAY too big
 
 ### Histogram
 
-Create histogram of values to determine "brightness" threshold
+From here I used this histogram script to draw a histogram of the values so I could determine a "brightness" threshold, the idea being that everything below (darker than) this threshold would be considered dirt, and everything above (brighter than) this threshold would be considered stone.
 
 ```
 $ ./histogram.py assets/values.json --title "Patio Rocks/Dirt Pixel Lightness Histogram"
@@ -48,7 +50,7 @@ $ ./histogram.py assets/values.json --title "Patio Rocks/Dirt Pixel Lightness Hi
 
 ### Threshold
 
-Determined threshold of light (stone) to dark (dirt) to be `~155`-ish
+I determined a good threshold of light (stone) to dark (dirt) to be `~155`-ish
 
 ### Check values
 
