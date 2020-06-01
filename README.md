@@ -30,7 +30,7 @@ Note: Ignore our lemon tree potter. That thing was too heavy to lift very far so
 
 ### Get "brightness" of image pixels
 
-I wrote [a script](image_color_values.py) to get the average "brightness" of each pixel using [the formula [(red + green + blue) / 3](https://stackoverflow.com/a/6449381) and outputted the results to a file in JSON format.
+I wrote [a script](image_color_values.py) to get the average "brightness" of each pixel using the formula [(red + green + blue) / 3](https://stackoverflow.com/a/6449381) and outputted the results to a file in JSON format.
 
 ```
 $ ./image_color_values.py assets/cropped.png > assets/values.json
